@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:layout_height="48dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <View
+        android:id="@+id/multiselect_bar_bg"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"/>
+
+    <TextView
+        android:id="@+id/tv_multiselect_done"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:text="@string/imagepicker_multiselect_done"
+        android:gravity="center"
+        android:paddingRight="24dp"
+        android:paddingLeft="24dp"
+        android:textSize="18sp"
+        android:textColor="@color/multiselect_done"
+        android:foreground="?selectableItemBackground"/>
+
+    <TextView
+        android:id="@+id/tv_multiselect_message"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        tools:text="You have to select 5 more images"
+        android:gravity="start|center_vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@id/tv_multiselect_done"
+        android:layout_toLeftOf="@id/tv_multiselect_done"
+        android:paddingLeft="16dp"
+        android:paddingStart="16dp"
+        android:textSize="14sp"
+        android:textColor="@color/primary_text">
+
+    </TextView>
+
+</RelativeLayout>
