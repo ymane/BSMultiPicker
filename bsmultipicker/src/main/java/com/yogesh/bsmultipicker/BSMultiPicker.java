@@ -571,7 +571,7 @@ public class BSMultiPicker extends BottomSheetDialogFragment implements LoaderMa
             tvMultiSelectMessage.setTextColor(ContextCompat.getColor(getContext(), multiSelectTextColor));
             if (newCount < minimumMultiSelectCount) {
                 tvMultiSelectMessage.setText(minimumMultiSelectCount - newCount == 1 ?
-                        getString(R.string.imagepicker_multiselect_not_enough_singular) :
+                        showVideo? getString(R.string.imagepicker_multiselect_not_enough_singular_image_or_video):getString(R.string.imagepicker_multiselect_not_enough_singular) :
                         getString(R.string.imagepicker_multiselect_not_enough_plural, minimumMultiSelectCount - newCount));
                 tvDone.setAlpha(0.4f);
                 tvDone.setEnabled(false);

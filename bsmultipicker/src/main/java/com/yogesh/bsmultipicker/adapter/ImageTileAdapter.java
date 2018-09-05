@@ -95,7 +95,7 @@ public class ImageTileAdapter extends RecyclerView.Adapter<ImageTileAdapter.Base
                 view.setLayoutParams(lp);
                 return new DummyViewHolder(view);
             case VIEWTYPE_VIDEO:
-                return new VideoTileViewHolder(LayoutInflater.from(context).inflate(R.layout.item_picker_image_tile, parent, false));
+                return new VideoTileViewHolder(LayoutInflater.from(context).inflate(R.layout.item_picker_image_video_tile, parent, false));
 
             default:
                 return new ImageTileViewHolder(LayoutInflater.from(context).inflate(R.layout.item_picker_image_tile, parent, false));
@@ -264,7 +264,7 @@ public class ImageTileAdapter extends RecyclerView.Adapter<ImageTileAdapter.Base
             ivImage = itemView.findViewById(R.id.item_imageTile);
             darken = itemView.findViewById(R.id.imageTile_selected_darken);
             ivTick = itemView.findViewById(R.id.imageTile_selected);
-            //videoView = itemView.findViewById(R.id.item_video_view);
+
             if (!isMultiSelect) {
                 itemView.setOnClickListener(imageTileOnClickListener);
             } else {
@@ -272,10 +272,6 @@ public class ImageTileAdapter extends RecyclerView.Adapter<ImageTileAdapter.Base
                     @Override
                     public void onClick(View v) {
                         File thisFile = imageList.get(getAdapterPosition());
-                      /*  if(thisFile.getAbsolutePath().endsWith(".mp4")){
-                            itemView.setOnClickListener(videoTileOnClickListener);
-                            itemView.performClick();
-                        }else {*/
                             if (selectedFiles.contains(thisFile)) {
                                 selectedFiles.remove(thisFile);
                                 notifyItemChanged(getAdapterPosition());
@@ -292,7 +288,6 @@ public class ImageTileAdapter extends RecyclerView.Adapter<ImageTileAdapter.Base
                             if (onSelectedCountChangeListener != null) {
                                 onSelectedCountChangeListener.onSelectedCountChange(selectedFiles.size());
                             }
-                       // }
                     }
                 });
             }

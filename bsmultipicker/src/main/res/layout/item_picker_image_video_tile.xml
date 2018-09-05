@@ -26,4 +26,13 @@
         android:layout_centerInParent="true"/>
 
 
+    <ImageView
+        android:id="@+id/item_video_view"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:background="@drawable/ic_video_white"
+        android:layout_margin="5dp"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"/>
+
 </com.yogesh.bsmultipicker.widget.FitWidthRelativeLayout>

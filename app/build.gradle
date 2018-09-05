@@ -26,6 +26,7 @@ dependencies {
         exclude group: "com.android.support"
     }
     annotationProcessor 'com.github.bumptech.glide:compiler:4.6.1'
+    //implementation 'com.yogesh.bsmultipicker:bsmultipicker:1.0.0'
     //implementation project(':bsimagepicker')
     implementation project(':bsmultipicker')
 }
