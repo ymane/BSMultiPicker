@@ -5,6 +5,8 @@ Forked from BSImagePicker, but added some features.like image/Video Picker
 
 1.0.0 
 First Release.
+1.0.1 
+bug fix .
 
 ## License
 
